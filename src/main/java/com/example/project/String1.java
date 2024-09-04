@@ -31,7 +31,12 @@ public class String1 {
     }
     public boolean equal(String1 s) {
         if (this.length() != s.length()) {
-            return false;
+		return false;
+        }
+	 for (int i = 0; i < this.length(); i++) {
+          if (this.getChar(i) != s.getChar(i)) {
+                return false;
+            }
         }
         return true;
     }
